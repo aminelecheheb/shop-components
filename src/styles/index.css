@@ -10,11 +10,21 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.mt {
+  padding-top: 5rem;
+}
+
 a {
   text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 .container {
   width: 90%;
   max-width: 1175px;
+  margin-right: auto;
+  margin-left: auto;
 }

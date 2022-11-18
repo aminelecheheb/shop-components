@@ -1,32 +1,5 @@
 import React from "react";
-import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
-export const links = [
-  {
-    id: 1,
-    url: "/",
-    text: "home",
-  },
-  {
-    id: 2,
-    url: "/laptops",
-    text: "laptops",
-  },
-  {
-    id: 3,
-    url: "/phones",
-    text: "phones",
-  },
-  {
-    id: 4,
-    url: "/items",
-    text: "items",
-  },
-  {
-    id: 5,
-    url: "/faq",
-    text: "FAQ",
-  },
-];
+import { FaFacebook, FaTwitter } from "react-icons/fa";
 
 export const social = [
   {

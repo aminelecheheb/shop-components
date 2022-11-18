@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { social } from "../data/navbar-data";
 import "../styles/Navbar.css";
-import { HiShoppingBag } from "react-icons/hi";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -12,6 +12,15 @@ const Navbar = () => {
   const toggleLinks = () => {
     setShowLinks(!showLinks);
   };
+
+  useEffect(() => {
+    const linksHeight = linksRef.current.getBoundingClientRect().height;
+    if (showLinks) {
+      linksContainerRef.current.style.height = `${linksHeight}px`;
+    } else {
+      linksContainerRef.current.style.height = "0px";
+    }
+  }, [showLinks]);
 
   return (
     <nav className="nav">
@@ -25,8 +34,13 @@ const Navbar = () => {
         <div className="links-container" ref={linksContainerRef}>
           <ul className="links" ref={linksRef}>
             <li>
-              <Link className="link" to="/items">
-                items
+              <Link className="link" to="/">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link className="link" to="/laptops">
+                Items
               </Link>
             </li>
           </ul>
@@ -44,7 +58,7 @@ const Navbar = () => {
         <div className="shopping-container">
           <button className="shopping">
             <span className="number-of-items">0</span>
-            <HiShoppingBag className="icon" />
+            <AiOutlineShoppingCart className="icon" />
           </button>
         </div>
       </div>

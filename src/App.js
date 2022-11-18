@@ -1,16 +1,18 @@
 // router
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // pages
-import Items from "./pages/Items";
+import Laptops from "./pages/Laptops";
 // components
 import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/items" element={<Items />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/laptops" element={<Laptops />} />
       </Routes>
     </Router>
   );

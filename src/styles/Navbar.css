@@ -76,7 +76,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
     position: relative;
     height: 62px;
   }
@@ -137,4 +136,15 @@ nav {
   top: -7px;
   right: -4px;
   font-weight: 700;
+}
+
+@media screen and (max-width: 800px) {
+  .nav-center {
+    position: relative;
+  }
+  .shopping-container {
+    position: absolute;
+    right: 70px;
+    top: 13px;
+  }
 }
