@@ -1,0 +1,140 @@
+nav {
+  background: rgb(252, 251, 251);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-center {
+  position: relative;
+  margin: 0 auto;
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 62px;
+}
+.nav-toggle {
+  font-size: 1.5rem;
+  color: black;
+  background: transparent;
+  border-color: transparent;
+  transition: 300ms ease-in-out;
+  cursor: pointer;
+  margin-top: 2px;
+}
+.nav-toggle:hover {
+  color: black;
+  transform: rotate(90deg);
+}
+.logo {
+  margin-bottom: 0;
+}
+.links a {
+  color: black;
+  font-size: 1rem;
+  text-transform: capitalize;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: 300ms ease-in-out;
+}
+.links a:hover {
+  color: rgb(89, 89, 238);
+  padding-left: 1.5rem;
+}
+.links .nav-active {
+  color: rgb(89, 89, 238);
+}
+
+.social-icons {
+  display: none;
+}
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: 300ms ease-in-out;
+}
+.dash {
+  margin-right: 7%;
+}
+.show-container {
+  height: 10rem;
+}
+.shopping .icon {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: relative;
+    height: 62px;
+  }
+
+  .shopping-container {
+    right: 0;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links-container {
+    height: auto !important;
+  }
+  .links {
+    display: flex;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+  .social-icons {
+    display: flex;
+    margin-right: 2rem;
+  }
+  .social-icons a {
+    margin: 0 0.5rem;
+    color: black;
+    transition: 300ms ease-in-out;
+  }
+  .social-icons a:hover {
+    color: rgb(89, 89, 238);
+  }
+}
+
+.shopping-container {
+  position: absolute;
+}
+.shopping {
+  background-color: transparent;
+  border: transparent;
+  width: 2rem;
+  height: 2rem;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  transition: 300ms ease-in-out;
+}
+
+.number-of-items {
+  position: absolute;
+  top: -7px;
+  right: -4px;
+  font-weight: 700;
+}
