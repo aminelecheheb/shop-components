@@ -4,8 +4,10 @@ import { social } from "../data/navbar-data";
 import "../styles/Navbar.css";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useGlobalContext } from "../context/appContext";
 
 const Navbar = () => {
+  const { cartItems, activeNav, toggleCart, cartIsOpen } = useGlobalContext();
   const [showLinks, setShowLinks] = useState(false);
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
@@ -34,13 +36,19 @@ const Navbar = () => {
         <div className="links-container" ref={linksContainerRef}>
           <ul className="links" ref={linksRef}>
             <li>
-              <Link className="link" to="/">
+              <Link
+                className={activeNav === "home" ? "link active" : "link"}
+                to="/"
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link className="link" to="/laptops">
-                Items
+              <Link
+                className={activeNav === "laptops" ? "link active" : "link"}
+                to="/laptops"
+              >
+                laptops
               </Link>
             </li>
           </ul>
@@ -56,9 +64,11 @@ const Navbar = () => {
           })}
         </ul>
         <div className="shopping-container">
-          <button className="shopping">
-            <span className="number-of-items">0</span>
-            <AiOutlineShoppingCart className="icon" />
+          <button className="shopping" onClick={toggleCart}>
+            <span className="number-of-items">{cartItems.length}</span>
+            <AiOutlineShoppingCart
+              className={cartIsOpen ? "icon icon-danger" : "icon"}
+            />
           </button>
         </div>
       </div>

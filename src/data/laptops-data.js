@@ -8,6 +8,7 @@ export const laptops = [
     cpu: "Intel i5 8ème gen",
     gpu: "intel uhd 630",
     screen: "14 inches",
+    price: 72000,
     image:
       "https://m.media-amazon.com/images/I/61vc-wuRnjL._AC_UY327_FMwebp_QL65_.jpg",
   },
@@ -20,6 +21,7 @@ export const laptops = [
     cpu: "Intel i5 8ème gen",
     gpu: "intel uhd 630",
     screen: "14 inches",
+    price: 72000,
     image:
       "https://m.media-amazon.com/images/I/61vc-wuRnjL._AC_UY327_FMwebp_QL65_.jpg",
   },
@@ -32,6 +34,7 @@ export const laptops = [
     cpu: "Intel i5 8ème gen",
     gpu: "intel uhd 630",
     screen: "14 inches",
+    price: 72000,
     image:
       "https://m.media-amazon.com/images/I/61vc-wuRnjL._AC_UY327_FMwebp_QL65_.jpg",
   },
@@ -44,6 +47,7 @@ export const laptops = [
     cpu: "Intel i5 8ème gen",
     gpu: "intel uhd 630",
     screen: "14 inches",
+    price: 72000,
     image:
       "https://m.media-amazon.com/images/I/61vc-wuRnjL._AC_UY327_FMwebp_QL65_.jpg",
   },
@@ -56,6 +60,7 @@ export const laptops = [
     cpu: "Intel i5 8ème gen",
     gpu: "intel uhd 630",
     screen: "14 inches",
+    price: 72000,
     image:
       "https://m.media-amazon.com/images/I/61vc-wuRnjL._AC_UY327_FMwebp_QL65_.jpg",
   },
@@ -68,6 +73,7 @@ export const laptops = [
     cpu: "Intel i5 8ème gen",
     gpu: "intel uhd 630",
     screen: "14 inches",
+    price: 72000,
     image:
       "https://m.media-amazon.com/images/I/61vc-wuRnjL._AC_UY327_FMwebp_QL65_.jpg",
   },
@@ -80,6 +86,7 @@ export const laptops = [
     cpu: "Intel i5 8ème gen",
     gpu: "intel uhd 630",
     screen: "14 inches",
+    price: 72000,
     image:
       "https://m.media-amazon.com/images/I/61vc-wuRnjL._AC_UY327_FMwebp_QL65_.jpg",
   },
@@ -92,6 +99,7 @@ export const laptops = [
     cpu: "Intel i5 8ème gen",
     gpu: "intel uhd 630",
     screen: "14 inches",
+    price: 72000,
     image:
       "https://m.media-amazon.com/images/I/61vc-wuRnjL._AC_UY327_FMwebp_QL65_.jpg",
   },
@@ -104,6 +112,7 @@ export const laptops = [
     cpu: "Intel i5 8ème gen",
     gpu: "intel uhd 630",
     screen: "14 inches",
+    price: 72000,
     image:
       "https://m.media-amazon.com/images/I/61vc-wuRnjL._AC_UY327_FMwebp_QL65_.jpg",
   },
@@ -116,6 +125,7 @@ export const laptops = [
     cpu: "Intel i5 8ème gen",
     gpu: "intel uhd 630",
     screen: "14 inches",
+    price: 72000,
     image:
       "https://m.media-amazon.com/images/I/61vc-wuRnjL._AC_UY327_FMwebp_QL65_.jpg",
   },
@@ -128,6 +138,7 @@ export const laptops = [
     cpu: "Intel i5 8ème gen",
     gpu: "intel uhd 630",
     screen: "14 inches",
+    price: 72000,
     image:
       "https://m.media-amazon.com/images/I/61vc-wuRnjL._AC_UY327_FMwebp_QL65_.jpg",
   },
@@ -140,6 +151,7 @@ export const laptops = [
     cpu: "Intel i5 8ème gen",
     gpu: "intel uhd 630",
     screen: "14 inches",
+    price: 72000,
     image:
       "https://m.media-amazon.com/images/I/61vc-wuRnjL._AC_UY327_FMwebp_QL65_.jpg",
   },
