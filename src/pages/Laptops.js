@@ -18,7 +18,26 @@ const sidebarVar = {
   }),
   closed: {
     clipPath: "circle(30px at 100% 0%)",
-    position: "fixed",
+    transition: {
+      type: "spring",
+      stiffness: 400,
+      damping: 40,
+      duration: 2,
+    },
+  },
+};
+const modelVar = {
+  open: (height = 1000) => ({
+    clipPath: `circle(${height * 2 + 200}px at 50% 50%)`,
+    transition: {
+      type: "spring",
+      stiffness: 20,
+      restDelta: 2,
+      duration: 2,
+    },
+  }),
+  closed: {
+    clipPath: "circle(1px at 50% 50%)",
     transition: {
       type: "spring",
       stiffness: 400,
@@ -68,8 +87,19 @@ const Laptops = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {singleLaptop.open && <LaptopPage />}
+      <AnimatePresence>
+        {singleLaptop.open && (
+          <motion.section
+            className="single-laptop mt"
+            variants={modelVar}
+            initial="closed"
+            animate="open"
+            exit="closed"
+          >
+            <LaptopPage />
+          </motion.section>
+        )}
+      </AnimatePresence>
       <div className="container items-container">
         {laptops.map((laptop) => {
           return <Laptop key={laptop.id} {...laptop} />;

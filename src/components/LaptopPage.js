@@ -1,5 +1,6 @@
 import React from "react";
 import { useGlobalContext } from "../context/appContext";
+import { motion } from "framer-motion";
 import "../styles/laptopPage.css";
 
 const LaptopPage = () => {
@@ -24,38 +25,36 @@ const LaptopPage = () => {
     addedFalse(id);
   };
   return (
-    <section className="single-laptop mt">
-      <div className="container single-laptop-flex">
-        <button className="close-single-laptop" onClick={closeSingleLaptop}>
-          close
-        </button>
-        <div className="image-wrapper">
-          <img src={image} alt={title} />
-        </div>
-        <div className="page-infos">
-          <h2 className="title">{title}</h2>
-          <p className="description">{description}</p>
-          <h2 className="price">{price}</h2>
-          <div className="buttons">
-            {added ? (
-              <button
-                className="target-btn target-btn-danger"
-                onClick={() => handleRemove(id)}
-              >
-                remove
-              </button>
-            ) : (
-              <button
-                className="target-btn"
-                onClick={() => handleAdd(singleLaptop.laptopInfo, id)}
-              >
-                Add to cart
-              </button>
-            )}
-          </div>
+    <div className="container single-laptop-flex">
+      <button className="close-single-laptop" onClick={closeSingleLaptop}>
+        close
+      </button>
+      <div className="image-wrapper">
+        <img src={image} alt={title} />
+      </div>
+      <div className="page-infos">
+        <h2 className="title">{title}</h2>
+        <p className="description">{description}</p>
+        <h2 className="price">{price}</h2>
+        <div className="buttons">
+          {added ? (
+            <button
+              className="target-btn target-btn-danger"
+              onClick={() => handleRemove(id)}
+            >
+              remove
+            </button>
+          ) : (
+            <button
+              className="target-btn"
+              onClick={() => handleAdd(singleLaptop.laptopInfo, id)}
+            >
+              Add to cart
+            </button>
+          )}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
