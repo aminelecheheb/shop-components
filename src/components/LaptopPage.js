@@ -1,10 +1,10 @@
 import React from "react";
 import { useGlobalContext } from "../context/appContext";
-import { motion } from "framer-motion";
 import "../styles/laptopPage.css";
 
 const LaptopPage = () => {
   const {
+    laptops,
     singleLaptop,
     addToCart,
     addedTrue,
@@ -24,6 +24,17 @@ const LaptopPage = () => {
     removeFromCart(id);
     addedFalse(id);
   };
+
+  let addedValue;
+  const getAddedValue = () => {
+    laptops.map((laptop) => {
+      if (laptop.id === id) {
+        addedValue = laptop.added;
+      }
+    });
+  };
+
+  getAddedValue();
   return (
     <div className="container single-laptop-flex">
       <button className="close-single-laptop" onClick={closeSingleLaptop}>
@@ -37,7 +48,7 @@ const LaptopPage = () => {
         <p className="description">{description}</p>
         <h2 className="price">{price}</h2>
         <div className="buttons">
-          {added ? (
+          {addedValue ? (
             <button
               className="target-btn target-btn-danger"
               onClick={() => handleRemove(id)}
