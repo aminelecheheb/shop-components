@@ -1,0 +1,29 @@
+.home-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+.home-page {
+  /* text-align: center; */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.home-title {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
+.home p {
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+#mail {
+  color: white;
+  text-decoration: none;
+}
+.block {
+  display: block;
+  text-align: center;
+}

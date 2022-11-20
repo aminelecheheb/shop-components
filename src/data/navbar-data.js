@@ -1,15 +1,15 @@
 import React from "react";
-import { FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaGithub } from "react-icons/fa";
 
 export const social = [
   {
     id: 1,
-    url: "https://www.twitter.com",
+    url: "https://facebook.com/wrath4",
     icon: <FaFacebook />,
   },
   {
     id: 2,
-    url: "https://www.twitter.com",
-    icon: <FaTwitter />,
+    url: "https://github.com/aminelecheheb",
+    icon: <FaGithub />,
   },
 ];

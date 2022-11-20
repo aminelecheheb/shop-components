@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Laptop from "../components/Laptop";
 import { useGlobalContext } from "../context/appContext";
 import "../styles/laptops.css";

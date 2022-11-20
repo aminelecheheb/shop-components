@@ -67,6 +67,10 @@ img {
   border-radius: 1rem;
 }
 
+.green {
+  background-color: rgb(3, 216, 3);
+}
+
 .target-btn-danger {
   background-color: rgb(252, 33, 33);
 }
