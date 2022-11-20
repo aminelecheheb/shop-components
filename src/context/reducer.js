@@ -87,6 +87,26 @@ const reducer = (state, action) => {
       cartItems: tempItems,
     };
   }
+
+  if (action.type === "OPEN_SINGLE_LAPTOP") {
+    return {
+      ...state,
+      singleLaptop: {
+        open: true,
+        laptopInfo: { ...action.payload },
+      },
+    };
+  }
+
+  if (action.type === "CLOSE_SINGLE_LAPTOP") {
+    return {
+      ...state,
+      singleLaptop: {
+        open: false,
+        laptopInfo: {},
+      },
+    };
+  }
 };
 
 export default reducer;

@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useGlobalContext } from "../context/appContext";
 import CartItem from "./CartItem";
 import "../styles/cart.css";
 
 const Cart = () => {
-  const { cartItems } = useGlobalContext();
+  const { cartItems, cartIsOpen } = useGlobalContext();
   let totalPrice = 0;
   cartItems.map((item) => {
     let { price, count } = item;
@@ -18,11 +18,7 @@ const Cart = () => {
     document.body.style.overflow = "unset";
   };
   return (
-    <div
-      className="card"
-      onMouseEnter={handleOverFlow}
-      onMouseLeave={removeOverFlow}
-    >
+    <>
       {cartItems.length < 1 && (
         <h2 className="empty-card">Your card is empty</h2>
       )}
@@ -37,7 +33,7 @@ const Cart = () => {
           </h2>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

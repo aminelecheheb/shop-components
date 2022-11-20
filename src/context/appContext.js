@@ -7,6 +7,10 @@ const initialState = {
   cartIsOpen: false,
   cartItems: [],
   activeNav: "",
+  singleLaptop: {
+    open: false,
+    laptopInfo: {},
+  },
 };
 
 const AppContext = React.createContext();
@@ -50,6 +54,14 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "DECREASE_COUNT", payload: id });
   };
 
+  const openSingleLaptop = (laptopInfo) => {
+    dispatch({ type: "OPEN_SINGLE_LAPTOP", payload: laptopInfo });
+  };
+
+  const closeSingleLaptop = () => {
+    dispatch({ type: "CLOSE_SINGLE_LAPTOP" });
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -63,6 +75,8 @@ const AppProvider = ({ children }) => {
         closeCart,
         increaseCount,
         decreaseCount,
+        openSingleLaptop,
+        closeSingleLaptop,
       }}
     >
       {children}

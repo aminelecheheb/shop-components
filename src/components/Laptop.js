@@ -2,8 +2,8 @@ import React from "react";
 import { useGlobalContext } from "../context/appContext";
 
 const Laptop = ({ image, title, description, price, id, added }) => {
-  const item = { image, title, price, id, count: 1 };
-  const { addToCart, removeFromCart, addedTrue, addedFalse } =
+  const item = { image, title, price, id, count: 1, description };
+  const { addToCart, removeFromCart, addedTrue, addedFalse, openSingleLaptop } =
     useGlobalContext();
 
   const handleAdd = (item, id) => {
@@ -26,7 +26,12 @@ const Laptop = ({ image, title, description, price, id, added }) => {
         </p>
         <p className="description">
           {`${description.substring(0, 100)}...`}{" "}
-          <button className="details-btn">Details</button>
+          <button
+            className="details-btn"
+            onClick={() => openSingleLaptop({ ...item, added })}
+          >
+            Details
+          </button>
         </p>
         {added ? (
           <button

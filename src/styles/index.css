@@ -8,10 +8,11 @@
 body {
   background-color: rgb(238, 242, 246);
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 .mt {
-  padding-top: 5rem;
+  padding-top: 6rem;
 }
 
 a {

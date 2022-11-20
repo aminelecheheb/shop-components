@@ -5,6 +5,9 @@
   gap: 1rem;
   padding-bottom: 3rem;
 }
+.items-page {
+  overflow-x: hidden;
+}
 .item {
   max-width: 400px;
   padding: 1rem;
