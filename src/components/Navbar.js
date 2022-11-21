@@ -3,10 +3,11 @@ import { FaBars } from "react-icons/fa";
 import { social } from "../data/navbar-data";
 import "../styles/Navbar.css";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useGlobalContext } from "../context/appContext";
 
 const Navbar = () => {
+  const location = useLocation();
   const { cartItems, activeNav, toggleCart, cartIsOpen } = useGlobalContext();
   const [showLinks, setShowLinks] = useState(false);
   const linksContainerRef = useRef(null);
@@ -15,6 +16,9 @@ const Navbar = () => {
     setShowLinks(!showLinks);
   };
 
+  useEffect(() => {
+    setShowLinks(false);
+  }, [location.pathname]);
   useEffect(() => {
     const linksHeight = linksRef.current.getBoundingClientRect().height;
     if (showLinks) {
